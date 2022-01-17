@@ -6,12 +6,12 @@
 #    By: arudy <arudy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/16 16:35:41 by arudy             #+#    #+#              #
-#    Updated: 2022/01/16 16:48:50 by arudy            ###   ########.fr        #
+#    Updated: 2022/01/17 18:14:42 by arudy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= $(addprefix srcs/, so_long.c parsing/parse_input.c \
-			utils/ft_strlen.c utils/ft_strnstr.c)
+SRCS	= $(addprefix srcs/, main.c parsing/parse_input.c \
+			utils/ft_strlen.c utils/ft_strnstr.c utils/ft_error.c)
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -21,7 +21,7 @@ RM		= rm -f
 
 CC		= cc
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -g3
 
 all:		${NAME}
 
@@ -29,7 +29,7 @@ all:		${NAME}
 			${CC} ${CFLAGS} -I/usr/include -Imlx -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-			${CC} ${CFLAGS} srcs/*.o -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o ${NAME}
+			${CC} ${CFLAGS} ${OBJS} -Lmlx -lmlx -L/usr/lib -Imlx -lXext -lX11 -lm -lz -o ${NAME}
 
 clean:
 			${RM} ${OBJS}

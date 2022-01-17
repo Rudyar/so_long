@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.c                                          :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 16:36:12 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/16 17:00:53 by arudy            ###   ########.fr       */
+/*   Created: 2022/01/17 18:07:18 by arudy             #+#    #+#             */
+/*   Updated: 2022/01/17 18:15:30 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
-int	main(int ac, char **av)
+int	ft_put_error(char *msg)
 {
-	t_map	map;
-
-	if (ac != 2)
-		return (0);
-	parse_input(&map, av[1]);
+	printf("%s\n", msg);
 	return (0);
 }
