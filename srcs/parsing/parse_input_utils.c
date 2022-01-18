@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parse_input_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 16:36:12 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/18 19:19:40 by arudy            ###   ########.fr       */
+/*   Created: 2022/01/18 18:39:40 by arudy             #+#    #+#             */
+/*   Updated: 2022/01/18 18:43:31 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../../so_long.h"
 
-int	main(int ac, char **av)
+int	ft_map_error(char *msg, t_map *map)
 {
-	t_map	map;
-
-	if (ac != 2)
-		return (0);
-	if (!parse_input(&map, av[1]))
-		return (0);
-	printf("Good : %d\n", map.x);
-	return (0);
+	free(map);
+	return (ft_put_error(msg));
 }

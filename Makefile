@@ -6,12 +6,14 @@
 #    By: arudy <arudy@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/16 16:35:41 by arudy             #+#    #+#              #
-#    Updated: 2022/01/17 18:14:42 by arudy            ###   ########.fr        #
+#    Updated: 2022/01/18 18:47:40 by arudy            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	= $(addprefix srcs/, main.c parsing/parse_input.c \
-			utils/ft_strlen.c utils/ft_strnstr.c utils/ft_error.c)
+			parsing/parse_input_utils.c utils/ft_strlen.c \
+			utils/ft_strnstr.c utils/get_next_line.c \
+			utils/get_next_line_utils.c utils/ft_error.c)
 
 OBJS	= ${SRCS:.c=.o}
 
