@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   init_data.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 18:07:18 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/19 12:37:46 by arudy            ###   ########.fr       */
+/*   Created: 2022/01/19 12:29:30 by arudy             #+#    #+#             */
+/*   Updated: 2022/01/19 12:30:56 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../so_long.h"
 
-int	ft_put_error(char *msg)
+void	init_data(t_data *data)
 {
-	printf("%s\n", msg);
-	return (0);
-}
-
-int	free_map(t_data *data)
-{
-	int	i;
-
-	i = 0;
-	while (i < data->row)
-	{
-		free(data->lines[i]);
-		i++;
-	}
-	free(data->lines);
-	return (0);
+	data->row = 0;
+	data->col = 0;
+	data->p = 0;
+	data->e = 0;
+	data->c = 0;
 }

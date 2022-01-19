@@ -6,12 +6,11 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 17:47:37 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/18 19:03:57 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/19 10:00:51 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../so_long.h"
-#define BUFFER_SIZE 1
 
 char	*ft_free(char *s)
 {
@@ -65,8 +64,6 @@ char	*make_line(char *stat)
 		line[j] = stat[j];
 		j++;
 	}
-	// if (stat[j] == '\n')
-	// 	line[j++] = '\n';
 	line[j] = '\0';
 	return (line);
 }

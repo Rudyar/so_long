@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:36:12 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/18 19:19:40 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/19 12:31:56 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int	main(int ac, char **av)
 {
-	t_map	map;
+	t_data	data;
 
 	if (ac != 2)
 		return (0);
-	if (!parse_input(&map, av[1]))
+	init_data(&data);
+	if (!parse_input(&data, av[1]))
 		return (0);
-	printf("Good : %d\n", map.x);
+	free_map(&data);
 	return (0);
 }

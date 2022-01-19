@@ -1,28 +1,6 @@
 Transformer les png en .xml
 
- // Checker si ac = 2
-// checker .ber & .ber a la fin !!
- Checker si .ber no null
-Calculer combien de lignes (calculer les \n ?)
-Calculer longueure ligne 1
-Calculer le nombre de P C E et X
-
-
 --------------------------------------------------------------------------------------------
-
-		count = read(fd, buff, 1);
-		if (count < 0)
-			break ;
-		if (buff[0] != '\n' && buff[0] != '\0')
-			map->lines[i] = ft_strjoin(map->lines[i], buff);
-		else
-			i++;
-
-
-
-
-
-
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 800
