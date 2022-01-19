@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:36:00 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/19 14:12:21 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/19 18:15:02 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define BUFFER_SIZE 1
 
 # include <mlx.h>
+# include <mlx_int.h>
 # include <stdlib.h>
 # include <stdio.h>
 # include <sys/types.h>
@@ -29,7 +30,11 @@ typedef struct s_data
 	int		p;
 	int		e;
 	int		c;
+	int		nb_mv;
 	char	**lines;
+	void	*mlx;
+	void	*win;
+	void	*img;
 }t_data;
 
 int		parse_input(t_data *data, char *input);
@@ -44,4 +49,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strjoin(char *s1, char *s2);
 char	*get_next_line(int fd);
 void	init_data(t_data *data);
+void	game(t_data *data);
+void	move_up(t_data *data);
+void	move_down(t_data *data);
+void	move_left(t_data *data);
+void	move_right(t_data *data);
 #endif
