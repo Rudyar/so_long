@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:43:42 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/19 14:12:53 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/20 11:01:39 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,11 +97,11 @@ int	check_components(t_data *data)
 			if (!check_c(data->lines[i][j]))
 				return (0);
 			if (data->lines[i][j] == 'P')
-				data->p += 1;
+				data->p++;
 			if (data->lines[i][j] == 'E')
-				data->e += 1;
+				data->e++;
 			if (data->lines[i][j] == 'C')
-				data->c += 1;
+				data->c++;
 			j++;
 		}
 		i++;

@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:36:00 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/19 18:15:02 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/20 11:46:58 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ typedef struct s_data
 	int		e;
 	int		c;
 	int		nb_mv;
+	int		p_pos_x;
+	int		p_pos_y;
+	int		img_size;
 	char	**lines;
 	void	*mlx;
 	void	*win;
@@ -44,8 +47,8 @@ int		free_map(t_data *data);
 int		check_c(char c);
 int		check_line_length(t_data *data);
 int		check_borders(t_data *data);
+int		ft_exit(t_data *data);
 size_t	ft_strlen(char *s);
-char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strjoin(char *s1, char *s2);
 char	*get_next_line(int fd);
 void	init_data(t_data *data);

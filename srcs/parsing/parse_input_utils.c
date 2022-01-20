@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:39:40 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/19 14:25:35 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/20 10:24:48 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ int	check_borders(t_data *data)
 	int	i;
 
 	i = 0;
-	if (!is_full_one(data->lines[0]) || !is_full_one(data->lines[data->row - 1]))
+	if (!is_full_one(data->lines[0])
+		|| !is_full_one(data->lines[data->row - 1]))
 		return (ft_put_error("Error\nMap have to be bordered by 1"));
 	while (i < data->row)
 	{

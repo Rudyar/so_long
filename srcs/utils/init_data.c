@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 12:29:30 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/19 18:00:09 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/20 11:21:51 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,8 @@ void	init_data(t_data *data)
 	data->p = 0;
 	data->e = 0;
 	data->c = 0;
+	data->p_pos_x = 0;
+	data->p_pos_y = 0;
 	data->nb_mv = 0;
+	data->img_size = 75;
 }
