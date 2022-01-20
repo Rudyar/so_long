@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:36:00 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/20 12:18:16 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/20 18:29:18 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		free_map(t_data *data);
 int		check_c(char c);
 int		check_line_length(t_data *data);
 int		check_borders(t_data *data);
+int		check_xpm(void);
 int		ft_exit(t_data *data);
 size_t	ft_strlen(char *s);
 char	*ft_strjoin(char *s1, char *s2);

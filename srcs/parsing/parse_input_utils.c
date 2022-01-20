@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 18:39:40 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/20 18:13:58 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/20 18:30:09 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,23 @@ int	check_borders(t_data *data)
 
 int	check_xpm(void)
 {
-	
+	if (open("assets/bg.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find bg.xpm"));
+	if (open("assets/col.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find col.xpm"));
+	if (open("assets/exit.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find exit.xpm"));
+	if (open("assets/skier_back.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find skier_back.xpm"));
+	if (open("assets/skier_front.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find skier_front.xpm"));
+	if (open("assets/skier_left.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find skier_left.xpm"));
+	if (open("assets/skier_right.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find skier_right.xpm"));
+	if (open("assets/skier_spawn.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find skier_spawn.xpm"));
+	if (open("assets/wall.xpm", O_RDONLY) < 0)
+		return (ft_put_error("Error\nCan't find wall.xpm"));
+	return (1);
 }
