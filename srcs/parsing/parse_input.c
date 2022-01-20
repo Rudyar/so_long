@@ -6,7 +6,7 @@
 /*   By: arudy <arudy@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:43:42 by arudy             #+#    #+#             */
-/*   Updated: 2022/01/20 11:01:39 by arudy            ###   ########.fr       */
+/*   Updated: 2022/01/20 18:13:47 by arudy            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ int	check_components(t_data *data)
 
 int	parse_input(t_data *data, char *input)
 {
-	if (!check_input(input) || !count_map_lines(data, input))
+	if (!check_input(input) || !count_map_lines(data, input) || !check_xpm())
 		return (0);
 	if (!init_map(data, input) || !check_line_length(data)
 		|| !check_components(data) || !check_borders(data))
